@@ -4,3 +4,9 @@ C:\Users\DimasDesktop\source\repos\Sudoku.Logic\obj\Debug\Sudoku.Logic.csprojAss
 C:\Users\DimasDesktop\source\repos\Sudoku.Logic\obj\Debug\Sudoku.Logic.csproj.CoreCompileInputs.cache
 C:\Users\DimasDesktop\source\repos\Sudoku.Logic\obj\Debug\Sudoku.Logic.dll
 C:\Users\DimasDesktop\source\repos\Sudoku.Logic\obj\Debug\Sudoku.Logic.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\bin\Debug\Sudoku.Logic.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\bin\Debug\Sudoku.Logic.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\obj\Debug\Sudoku.Logic.csprojAssemblyReference.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\obj\Debug\Sudoku.Logic.csproj.CoreCompileInputs.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\obj\Debug\Sudoku.Logic.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.Logic\obj\Debug\Sudoku.Logic.pdb

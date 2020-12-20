@@ -1,0 +1,10 @@
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\bin\Debug\ConsoleTester.exe.config
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\bin\Debug\ConsoleTester.exe
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\bin\Debug\ConsoleTester.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\bin\Debug\Sudoku.Logic.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\bin\Debug\Sudoku.Logic.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\obj\Debug\ConsoleTester.csprojAssemblyReference.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\obj\Debug\ConsoleTester.csproj.CoreCompileInputs.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\obj\Debug\ConsoleTester.csproj.CopyComplete
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\obj\Debug\ConsoleTester.exe
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\ConsoleTester\obj\Debug\ConsoleTester.pdb

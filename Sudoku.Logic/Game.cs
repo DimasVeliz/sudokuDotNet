@@ -7,33 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sudoku.Logic
 {
-    public static class ThreadSafeRandom
-    {
-        [ThreadStatic] private static Random Local;
-
-        public static Random ThisThreadsRandom
-        {
-            get { return Local ?? (Local = new Random(unchecked(Environment.TickCount * 31 + Thread.CurrentThread.ManagedThreadId))); }
-        }
-    }
-
-    static class MyExtensions
-    {
-        public static IEnumerable<T> Shuffle<T>(this IList<T> list)
-        {
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = ThreadSafeRandom.ThisThreadsRandom.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-            return list;
-        }
-    }
-
+    
 
     public class Game
     {
@@ -77,8 +51,24 @@ namespace Sudoku.Logic
             return true;
         }
 
-        public bool TryUserAttempValid(int r, int c, int num)
+        public bool TryUserAttemp(int r, int c, int num)
         {
+            if (num<=0 || num>9)
+            {
+                return false;
+            }
+
+            if (r < 0 || r > 9)
+            {
+                return false;
+            }
+
+            if (c < 0 || c > 9)
+            {
+                return false;
+
+            }
+
             bool wereNoCrash = CheckCrash(this.UserBoard,r, c, num);
             if (wereNoCrash)
             {
@@ -177,6 +167,9 @@ namespace Sudoku.Logic
             }
         }
 
+
+        public Board Solution { get => InternalBoard; }
+        
 
     }
 }
