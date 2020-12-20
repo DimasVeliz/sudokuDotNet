@@ -1,0 +1,13 @@
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.exe
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.deps.json
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.runtimeconfig.json
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.runtimeconfig.dev.json
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\bin\Debug\netcoreapp3.1\sudoku.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.csprojAssemblyReference.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.AssemblyInfoInputs.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.AssemblyInfo.cs
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.csproj.CoreCompileInputs.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\obj\Debug\netcoreapp3.1\sudoku.genruntimeconfig.cache

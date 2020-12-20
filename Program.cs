@@ -35,14 +35,14 @@ namespace sudoku
     class Program
     {
 
-        public static bool SolveSudoku(int[,] matrix, bool randomize = false)
+        public static bool SolveSudoku(int[,] UserBoard, bool randomize = false)
         {
             int[] arr = { 9, 2, 3, 4, 5, 6, 7, 8, 1 };
             var numbers =arr.ToList().Shuffle().ToArray();
-            return SolveSudokuHelper(matrix, 0, 0, numbers);
+            return SolveSudokuHelper(UserBoard, 0, 0, numbers);
         }
 
-        private static bool SolveSudokuHelper(int[,] matrix, int i, int j, int[] numbers)
+        private static bool SolveSudokuHelper(int[,] UserBoard, int i, int j, int[] numbers)
         {
             
             if (i == 8 && j == 9)
@@ -56,25 +56,25 @@ namespace sudoku
                 i++;
                 j = 0;
             }
-            if (matrix[i, j] != 0)
-                return SolveSudokuHelper(matrix, i, j + 1, numbers);
+            if (UserBoard[i, j] != 0)
+                return SolveSudokuHelper(UserBoard, i, j + 1, numbers);
 
 
             for (int k = 0; k < numbers.Length; k++)
             {
                 int num = numbers[k];
-                bool nohayCrash = CheckCrash(matrix, i, j, num);
+                bool nohayCrash = CheckCrash(UserBoard, i, j, num);
                 if (nohayCrash)
                 {
-                    matrix[i, j] = num;
-                    bool foundSolution = SolveSudokuHelper(matrix, i, j + 1, numbers);
+                    UserBoard[i, j] = num;
+                    bool foundSolution = SolveSudokuHelper(UserBoard, i, j + 1, numbers);
                     if (foundSolution)
                     {
                         return true;
                     }
 
                 }
-                matrix[i, j] = 0;
+                UserBoard[i, j] = 0;
 
             }
             return false;
@@ -82,13 +82,13 @@ namespace sudoku
 
         }
 
-        private static void PrintBoard(int[,] matrix)
+        private static void PrintBoard(int[,] UserBoard)
         {
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int i = 0; i < UserBoard.GetLength(0); i++)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int j = 0; j < UserBoard.GetLength(1); j++)
                 {
-                    System.Console.Write(matrix[i, j] + " ");
+                    System.Console.Write(UserBoard[i, j] + " ");
                 }
                 System.Console.WriteLine();
             }
@@ -115,7 +115,7 @@ namespace sudoku
 
             // Check if we find the same num
             // in the particular 3*3
-            // matrix, we return false
+            // UserBoard, we return false
             int startRow = row - row % 3, startCol
                                           = col - col % 3;
             for (int i = 0; i < 3; i++)
@@ -128,7 +128,7 @@ namespace sudoku
 
         static void Main(string[] args)
         {
-            int[,] matrix =  {
+            int[,] UserBoard =  {
                          { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
                          { 5, 2, 0, 0, 0, 0, 0, 0, 0 },
                          { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
@@ -139,10 +139,10 @@ namespace sudoku
                          { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
                          { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
             };
-            matrix = new int[9, 9];
-            if (SolveSudoku(matrix))
+            UserBoard = new int[9, 9];
+            if (SolveSudoku(UserBoard))
             {
-                PrintBoard(matrix);
+                PrintBoard(UserBoard);
             }
         }
     }
