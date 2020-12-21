@@ -30,10 +30,10 @@ namespace Sudoku.UI
         private void InitializeComponent()
         {
             this.btnStartGame = new System.Windows.Forms.Button();
-            this.btnHint = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numUpDwHints = new System.Windows.Forms.NumericUpDown();
+            this.lblSelectedPosition = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDwHints)).BeginInit();
             this.SuspendLayout();
@@ -47,16 +47,6 @@ namespace Sudoku.UI
             this.btnStartGame.Text = "(Re)-Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
-            // 
-            // btnHint
-            // 
-            this.btnHint.Location = new System.Drawing.Point(496, 71);
-            this.btnHint.Name = "btnHint";
-            this.btnHint.Size = new System.Drawing.Size(163, 23);
-            this.btnHint.TabIndex = 1;
-            this.btnHint.Text = "Show Hint";
-            this.btnHint.UseVisualStyleBackColor = true;
-            this.btnHint.Click += new System.EventHandler(this.btnHint_Click);
             // 
             // btnSolve
             // 
@@ -90,34 +80,51 @@ namespace Sudoku.UI
             this.numUpDwHints.Name = "numUpDwHints";
             this.numUpDwHints.Size = new System.Drawing.Size(40, 20);
             this.numUpDwHints.TabIndex = 3;
+            this.numUpDwHints.Value = new decimal(new int[] {
+            17,
+            0,
+            0,
+            0});
+            // 
+            // lblSelectedPosition
+            // 
+            this.lblSelectedPosition.AutoSize = true;
+            this.lblSelectedPosition.Location = new System.Drawing.Point(21, 395);
+            this.lblSelectedPosition.Name = "lblSelectedPosition";
+            this.lblSelectedPosition.Size = new System.Drawing.Size(85, 13);
+            this.lblSelectedPosition.TabIndex = 4;
+            this.lblSelectedPosition.Text = "Selected Cell is: ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 444);
+            this.ClientSize = new System.Drawing.Size(726, 444);
+            this.Controls.Add(this.lblSelectedPosition);
             this.Controls.Add(this.numUpDwHints);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSolve);
-            this.Controls.Add(this.btnHint);
             this.Controls.Add(this.btnStartGame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDwHints)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnStartGame;
-        private System.Windows.Forms.Button btnHint;
         private System.Windows.Forms.Button btnSolve;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown numUpDwHints;
+        private System.Windows.Forms.Label lblSelectedPosition;
     }
 }
 
