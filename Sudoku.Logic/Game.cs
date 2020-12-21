@@ -11,6 +11,7 @@ namespace Sudoku.Logic
 
     public class Game
     {
+        public bool IsSolved { get; set; }
         private Board InternalBoard {  get;  set; }
         public Board UserBoard { get; private set; }
         public Game(int amountOfHints)
@@ -20,7 +21,7 @@ namespace Sudoku.Logic
             CreateValidBoard();
             AmountOfHints(amountOfHints);
         }
-
+        public int GameSize { get => 9; }
         private bool CheckCrash(IBoard board,int row, int col, int num)
         {
 
@@ -170,6 +171,28 @@ namespace Sudoku.Logic
 
         public Board Solution { get => InternalBoard; }
         
+        public void SolvePlease()
+        {
+            UserBoard = InternalBoard;
+            IsSolved = true;
+        }
+
+        public bool GiveHint()
+        {
+            for (int i = 0; i < GameSize; i++)
+            {
+                for (int j = 0; j < GameSize; j++)
+                {
+                    if (UserBoard[i,j]==0)
+                    {
+                        UserBoard[i, j] = InternalBoard[i,j];
+                        return true;
+                    }
+                }
+            }
+            IsSolved = true;
+            return false;
+        }
 
     }
 }

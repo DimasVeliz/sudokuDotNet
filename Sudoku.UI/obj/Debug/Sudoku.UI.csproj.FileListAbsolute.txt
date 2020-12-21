@@ -1,0 +1,13 @@
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\bin\Debug\Sudoku.UI.exe.config
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\bin\Debug\Sudoku.UI.exe
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\bin\Debug\Sudoku.UI.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\bin\Debug\Sudoku.Logic.dll
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\bin\Debug\Sudoku.Logic.pdb
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.csprojAssemblyReference.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.Form1.resources
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.Properties.Resources.resources
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.csproj.GenerateResource.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.csproj.CoreCompileInputs.cache
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.csproj.CopyComplete
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.exe
+C:\Users\DimasDesktop\source\repos\sudokuDotNet\Sudoku.UI\obj\Debug\Sudoku.UI.pdb
