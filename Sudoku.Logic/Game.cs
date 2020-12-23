@@ -12,8 +12,8 @@ namespace Sudoku.Logic
     public class Game
     {
         public bool IsSolved { get; set; }
-        private Board InternalBoard {  get;  set; }
-        public Board UserBoard { get; private set; }
+        private IBoard InternalBoard {  get;  set; }
+        public IBoard UserBoard { get; private set; }
         public Game(int amountOfHints)
         {
             InternalBoard = new Board();
@@ -169,7 +169,7 @@ namespace Sudoku.Logic
         }
 
 
-        public Board Solution { get => InternalBoard; }
+        public IBoard Solution { get => InternalBoard; }
         
         public void SolvePlease()
         {
