@@ -221,9 +221,13 @@ namespace Sudoku.Logic
             if (Movements.Count>0)
             {
                 Movements.Pop();
-                var shallowCopy = Movements.Peek();
-                Clone(shallowCopy, UserBoard);
-                return true;
+                if (Movements.Count>0)
+                {
+
+                    var shallowCopy = Movements.Peek();
+                    Clone(shallowCopy, UserBoard);
+                    return true;
+                }
             }
             return false;
         }
