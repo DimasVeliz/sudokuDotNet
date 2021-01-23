@@ -14,13 +14,7 @@ namespace Sudoku.Logic
         public bool IsSolved { get; set; }
         private IBoard InternalBoard {  get;  set; }
         public IBoard UserBoard { get; private set; }
-        public Game(int amountOfHints)
-        {
-            InternalBoard = new Board();
-            UserBoard = new Board();
-            CreateValidBoard();
-            AmountOfHints(amountOfHints);
-        }
+       
         public int GameSize { get => 9; }
         private bool CheckCrash(IBoard board,int row, int col, int num)
         {
@@ -52,8 +46,14 @@ namespace Sudoku.Logic
             return true;
         }
         public Stack<IBoard> Movements { get; set; }
-        public Game()
+
+
+        public Game(int amountOfHints)
         {
+            InternalBoard = new Board();
+            UserBoard = new Board();
+            CreateValidBoard();
+            AmountOfHints(amountOfHints);
             Movements = new Stack<IBoard>();
         }
 
