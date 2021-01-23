@@ -176,5 +176,11 @@ namespace Sudoku.UI
                 MessageBox.Show("Sorry no more actions available");
             }
         }
+
+        private void btnSaveGame_Click(object sender, EventArgs e)
+        {
+            sudokuGame.SaveGame();
+            MessageBox.Show("Thanks for saving");
+        }
     }
 }

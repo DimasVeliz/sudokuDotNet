@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -238,6 +239,23 @@ namespace Sudoku.Logic
             }
             return false;
         }
+        
+        public void SaveGame() 
+        {
+            string path = "gameStatus.gst";
+            FileStream f = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            StreamWriter sw = new StreamWriter(f);
 
+            for (int i = 0; i < GameSize; i++)
+            {
+                for (int j = 0; j < GameSize; j++)
+                {
+                    sw.WriteLine(UserBoard[i, j].ToString());
+                }
+                
+            }
+            sw.Close();
+            f.Close();
+        }
     }
 }
