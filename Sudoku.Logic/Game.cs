@@ -14,7 +14,8 @@ namespace Sudoku.Logic
         public bool IsSolved { get; set; }
         private IBoard InternalBoard {  get;  set; }
         public IBoard UserBoard { get; private set; }
-       
+        public IBoard First { get; private set; }
+
         public int GameSize { get => 9; }
         private bool CheckCrash(IBoard board,int row, int col, int num)
         {
@@ -55,9 +56,9 @@ namespace Sudoku.Logic
             CreateValidBoard();
             AmountOfHints(amountOfHints);
             Movements = new Stack<IBoard>();
-            IBoard first = new Board();
-            Clone(UserBoard, first);
-            Movements.Push(first);
+            First = new Board();
+            Clone(UserBoard, First);
+            Movements.Push(First);
         }
 
         public bool TryUserAttemp(int r, int c, int num)
@@ -227,6 +228,12 @@ namespace Sudoku.Logic
                     var shallowCopy = Movements.Peek();
                     Clone(shallowCopy, UserBoard);
                     return true;
+                }
+                else
+                {
+                    Clone(First, UserBoard);
+                    return true;
+
                 }
             }
             return false;
