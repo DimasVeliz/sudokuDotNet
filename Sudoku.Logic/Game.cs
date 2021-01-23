@@ -52,6 +52,10 @@ namespace Sudoku.Logic
             return true;
         }
         public Stack<IBoard> Movements { get; set; }
+        public Game()
+        {
+            Movements = new Stack<IBoard>();
+        }
 
         public bool TryUserAttemp(int r, int c, int num)
         {
