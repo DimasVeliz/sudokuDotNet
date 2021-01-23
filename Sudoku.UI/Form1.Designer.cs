@@ -34,6 +34,7 @@ namespace Sudoku.UI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.numUpDwHints = new System.Windows.Forms.NumericUpDown();
             this.lblSelectedPosition = new System.Windows.Forms.Label();
+            this.btnUndo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDwHints)).BeginInit();
             this.SuspendLayout();
@@ -95,11 +96,22 @@ namespace Sudoku.UI
             this.lblSelectedPosition.TabIndex = 4;
             this.lblSelectedPosition.Text = "Selected Cell is: ";
             // 
+            // btnUndo
+            // 
+            this.btnUndo.Location = new System.Drawing.Point(409, 330);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(122, 47);
+            this.btnUndo.TabIndex = 5;
+            this.btnUndo.Text = "Undo";
+            this.btnUndo.UseVisualStyleBackColor = true;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 444);
+            this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.lblSelectedPosition);
             this.Controls.Add(this.numUpDwHints);
             this.Controls.Add(this.pictureBox1);
@@ -125,6 +137,7 @@ namespace Sudoku.UI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown numUpDwHints;
         private System.Windows.Forms.Label lblSelectedPosition;
+        private System.Windows.Forms.Button btnUndo;
     }
 }
 

@@ -162,5 +162,19 @@ namespace Sudoku.UI
                 pictureBox1.Refresh();
             }
         }
+
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            bool resultUndo=sudokuGame.UndoAction();
+            if (resultUndo)
+            {
+                MessageBox.Show("Successfully Un-do");
+                pictureBox1.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Sorry no more actions available");
+            }
+        }
     }
 }
