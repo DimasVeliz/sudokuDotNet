@@ -55,6 +55,9 @@ namespace Sudoku.Logic
             CreateValidBoard();
             AmountOfHints(amountOfHints);
             Movements = new Stack<IBoard>();
+            IBoard first = new Board();
+            Clone(UserBoard, first);
+            Movements.Push(first);
         }
 
         public bool TryUserAttemp(int r, int c, int num)
@@ -217,7 +220,8 @@ namespace Sudoku.Logic
         {
             if (Movements.Count>0)
             {
-                var shallowCopy = Movements.Pop();
+                Movements.Pop();
+                var shallowCopy = Movements.Peek();
                 Clone(shallowCopy, UserBoard);
                 return true;
             }
