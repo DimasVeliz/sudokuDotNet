@@ -18,6 +18,7 @@ namespace Sudoku.Logic
         public int this[int r, int c] { get => UserBoard[r,c]; set => UserBoard[r,c] = value; }
 
         public int BoardSize { get => 9;  }
-       
+
+        
     }
 }

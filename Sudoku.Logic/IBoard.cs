@@ -10,6 +10,6 @@ namespace Sudoku.Logic
     {
         int this[int r, int c] { get; set; }
         int BoardSize { get; }
-
+        
     }
 }

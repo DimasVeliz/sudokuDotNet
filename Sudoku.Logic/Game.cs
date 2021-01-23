@@ -51,6 +51,7 @@ namespace Sudoku.Logic
 
             return true;
         }
+        public Stack<IBoard> Movements { get; set; }
 
         public bool TryUserAttemp(int r, int c, int num)
         {
@@ -74,9 +75,23 @@ namespace Sudoku.Logic
             if (wereNoCrash)
             {
                 UserBoard[r, c] = num;
+                IBoard previous = new Board();
+                Clone(UserBoard, previous);
+                Movements.Push(previous);
                 return true;
             }
             return false;
+        }
+
+        private void Clone(IBoard userBoard, IBoard previous)
+        {
+            for (int i = 0; i < userBoard.BoardSize; i++)
+            {
+                for (int j = 0; j < userBoard.BoardSize; j++)
+                {
+                    previous[i, j] = userBoard[i, j];
+                }
+            }
         }
 
         private bool SolveSudoku(bool randomize = false)
@@ -191,6 +206,17 @@ namespace Sudoku.Logic
                 }
             }
             IsSolved = true;
+            return false;
+        }
+
+        public bool UndoAction()
+        {
+            if (Movements.Count>0)
+            {
+                var shallowCopy = Movements.Pop();
+                Clone(shallowCopy, UserBoard);
+                return true;
+            }
             return false;
         }
 
